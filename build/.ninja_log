@@ -1,0 +1,6 @@
+# ninja log v5
+7	924	7019920334480591	CMakeFiles/Project__setup_util.py_exec_install_python.dir/catkin_generated/add_python_executable/Project__setup_util.py_exec_install_python/_setup_util.cpp.obj	a3dd2b63134fd586
+926	1266	7019920337697715	catkin_generated/windows_wrappers/Project__setup_util.py_exec_install_python/_setup_util.exe	f1be6a9d6e7fcb59
+6	2326	7019933379221057	build.ninja	1448e74d920087b9
+4	1330	7019933393031792	CMakeFiles/light_dance__setup_util.py_exec_install_python.dir/catkin_generated/add_python_executable/light_dance__setup_util.py_exec_install_python/_setup_util.cpp.obj	e6adeae074fe0bd
+1331	1703	7019933396584011	catkin_generated/windows_wrappers/light_dance__setup_util.py_exec_install_python/_setup_util.exe	12bd9b98a8850671

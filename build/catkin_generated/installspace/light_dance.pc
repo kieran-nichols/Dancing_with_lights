@@ -1,0 +1,8 @@
+prefix=C:/Users/the1k/source/repos/Light_dance_project/install
+
+Name: light_dance
+Description: Description of light_dance
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs
