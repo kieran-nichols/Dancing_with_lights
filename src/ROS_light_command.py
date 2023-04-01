@@ -11,8 +11,7 @@ import numpy
         # define callback functions for the ROS subscibers
 
             
-class LightNode():
-   
+class LightNode(): 
     def __init__(self):
         rospy.init_node('light', anonymous=True)
         
@@ -27,6 +26,7 @@ class LightNode():
         
     def xsens_com_callback(self, data):
         self.xsens_com = numpy.array(data.data)
+        print(self.xsens_com[1])
     
     def xsens_joint_angle_callback(self, data):
         self.xsens_joint_angle = numpy.array(data.data)

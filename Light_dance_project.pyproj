@@ -23,6 +23,7 @@
   <ItemGroup>
     <Compile Include="Light_dance_project.py" />
     <Compile Include="Receive_socket.py" />
+    <Compile Include="ROS_light_command.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
