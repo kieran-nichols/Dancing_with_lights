@@ -1,4 +1,4 @@
-#!C:/opt/ros/noetic/x64/python.exe
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 # Software License Agreement (BSD License)
@@ -54,15 +54,15 @@ PATH_TO_ADD_SUFFIX = ['bin']
 if IS_WINDOWS:
     # while catkin recommends putting dll's into bin, 3rd party packages often put dll's into lib
     # since Windows finds dll's via the PATH variable, prepend it with path to lib
-    PATH_TO_ADD_SUFFIX.extend(['lib'])
+    PATH_TO_ADD_SUFFIX.extend([['lib', os.path.join('lib', 'arm-linux-gnueabihf')]])
 
 # subfolder of workspace prepended to CMAKE_PREFIX_PATH
 ENV_VAR_SUBFOLDERS = {
     'CMAKE_PREFIX_PATH': '',
-    'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': 'lib',
+    'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': ['lib', os.path.join('lib', 'arm-linux-gnueabihf')],
     'PATH': PATH_TO_ADD_SUFFIX,
-    'PKG_CONFIG_PATH': os.path.join('lib', 'pkgconfig'),
-    'PYTHONPATH': 'lib/site-packages',
+    'PKG_CONFIG_PATH': [os.path.join('lib', 'pkgconfig'), os.path.join('lib', 'arm-linux-gnueabihf', 'pkgconfig')],
+    'PYTHONPATH': 'lib/python3/dist-packages',
 }
 
 
@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'C:\opt\ros\noetic\x64\tools\vcpkg\installed\x64-windows;C:/Users/the1k/source/repos/PythonApplication1/catkin_ws_remote/devel;c:\opt\ros\noetic\x64'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/pi/ros_catkin_ws/install_isolated'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

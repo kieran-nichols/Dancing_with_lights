@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "rospy;std_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "light_dance"
-PROJECT_SPACE_DIR = "C:/Users/the1k/source/repos/Light_dance_project/devel"
+PROJECT_SPACE_DIR = "/home/pi/Dancing_with_lights/devel"
 PROJECT_VERSION = "0.0.0"
