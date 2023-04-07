@@ -9,6 +9,7 @@ from std_msgs.msg import Float32MultiArray, MultiArrayDimension
 import numpy
 from govee_api_ble import GoveeDevice
 from matplotlib import cm
+import colour as Color
 # ~ import seaborn as sns
 
             
@@ -23,10 +24,13 @@ class LightNode():
         self.rate = rospy.Rate(1)
         # Initialization and declaration of global-like (self) variables
         self.x_pos = 0; self.y_pos = 0
-        self.prev_var1 = 0; self.prev_var2 = 0
+        self.prev_brightness = 0
+        self.prev.color = 0
         self.brightnesses = [x for x in range(1,100,1)]
         # ~ self.colors = cm.rainbow(numpy.linspace(0,1,10)) #[x for x in range(1,255,2)] #sns.color_palette("Spectral", 100).as_hex()
-        self.colors = [x for x in range(1,255,2)]
+        #self.colors = [x for x in range(1,255,2)]
+        red = Color("red")
+        self.colors = list(red.range_to(Color("blue"),100))
         # ~ print(self.colors)
         
     def xsens_com_callback(self, data):
@@ -63,15 +67,37 @@ class LightNode():
         # Put light command code here
         while not rospy.is_shutdown(): # loop until node is shut down
             # ~ print("Command sent")
-            offset_x = 10
-            brightness = self.brightnesses[int(self.x_pos*10)+offset_x]
-            self.my_device.setBrightness(brightness)
+            x_max = 2
+            x_min = 0.5
+            y_min = 0.5
+            y_max = 2
             
-            offset_y = 10
-            subset_x = (self.colors[int(self.x_pos*10)+offset_x])
-            subset_y = (self.colors[int(self.y_pos*10)+offset_y])
-            color = [subset_x,subset_y,0]
-            self.my_device.setColor(color) # Sets entire light strip to new color
+            try:
+                # Keep brightness between 0 and 100 for the min and max x distances of the room
+                brightness = self.brightnesses[int(max(0, min(100, (self.x_pos - x_min) / (x_max - x_min) * 100)))]
+            
+                # Keep color between 0 and 255 for the min and max y distances of the room
+                color = self.colors[int(max(0, min(100, (self.y_pos - y_min) / (y_max - y_min) * 100)))]
+            
+                #offset_x = 10
+                #brightness = self.brightnesses[int(self.x_pos*10)+offset_x]
+                #offset_y = 10
+                #subset_x = (self.colors[int(self.x_pos*10)+offset_x])
+                #subset_y = (self.colors[int(self.y_pos*10)+offset_y])
+                #color = [subset_x,subset_y,0]
+                        
+                # set the color and brightness of the light
+                self.my_device.setBrightness(brightness)
+                self.my_device.setColor(color) # Sets entire light strip to new color
+
+            except:
+                brightness = self.prev_brightness
+                color = self.prev_color
+                print("An error occured")
+
+            # remember previous light settings
+            self.prev_brightness = brightness
+            self.prev.color = color
             
             self.rate.sleep()
 
