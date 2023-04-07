@@ -67,14 +67,14 @@ set(light_dance_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(light_dance_SOURCE_PREFIX /home/pi/Dancing_with_lights/src)
-  set(light_dance_DEVEL_PREFIX /home/pi/Dancing_with_lights/devel)
+  set(light_dance_SOURCE_PREFIX /home/the1kieran/Dancing_with_lights/src)
+  set(light_dance_DEVEL_PREFIX /home/the1kieran/Dancing_with_lights/devel)
   set(light_dance_INSTALL_PREFIX "")
   set(light_dance_PREFIX ${light_dance_DEVEL_PREFIX})
 else()
   set(light_dance_SOURCE_PREFIX "")
   set(light_dance_DEVEL_PREFIX "")
-  set(light_dance_INSTALL_PREFIX /home/pi/Dancing_with_lights/install)
+  set(light_dance_INSTALL_PREFIX /home/the1kieran/Dancing_with_lights/install)
   set(light_dance_PREFIX ${light_dance_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pi/Dancing_with_lights/install/lib;/home/pi/ros_catkin_ws/install_isolated/lib)
+    foreach(path /home/the1kieran/Dancing_with_lights/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

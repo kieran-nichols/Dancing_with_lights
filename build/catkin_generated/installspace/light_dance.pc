@@ -1,4 +1,4 @@
-prefix=/home/pi/Dancing_with_lights/install
+prefix=/home/the1kieran/Dancing_with_lights/install
 
 Name: light_dance
 Description: Description of light_dance
