@@ -45,8 +45,8 @@ class PaintWidget(QWidget):
         # Colored rectangles
         color = [200, 0, 0]
         color_rgb = QColor(color[0], color[1], color[2])
-        color_hsv = (color_rgb).getHsv()
-        print(color_rgb.getHsv(), color_hsv)
+        color_hsv = color_rgb.getHsv()
+        #print(color_rgb.getHsv(), color_hsv)
         brightness = 100
         qp.setBrush(QColor.fromHsv(color_hsv[0], brightness, 255, 255))
         qp.drawRect(0, 0, 1920, 1080)
