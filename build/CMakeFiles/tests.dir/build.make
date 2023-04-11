@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Dancing_with_lights/src
+CMAKE_SOURCE_DIR = /home/the1kieran/Dancing_with_lights/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Dancing_with_lights/build
+CMAKE_BINARY_DIR = /home/the1kieran/Dancing_with_lights/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/pi/Dancing_with_lights/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Dancing_with_lights/src /home/pi/Dancing_with_lights/src /home/pi/Dancing_with_lights/build /home/pi/Dancing_with_lights/build /home/pi/Dancing_with_lights/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/the1kieran/Dancing_with_lights/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/the1kieran/Dancing_with_lights/src /home/the1kieran/Dancing_with_lights/src /home/the1kieran/Dancing_with_lights/build /home/the1kieran/Dancing_with_lights/build /home/the1kieran/Dancing_with_lights/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

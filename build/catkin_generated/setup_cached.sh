@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/pi/Dancing_with_lights/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/pi/Dancing_with_lights/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/pi/Dancing_with_lights/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/pi/Dancing_with_lights/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/the1kieran/Dancing_with_lights/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/the1kieran/Dancing_with_lights/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/the1kieran/Dancing_with_lights/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/the1kieran/Dancing_with_lights/src:$ROS_PACKAGE_PATH"

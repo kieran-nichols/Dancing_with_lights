@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pi/Dancing_with_lights/install")
+  set(CMAKE_INSTALL_PREFIX "/home/the1kieran/Dancing_with_lights/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/Dancing_with_lights/build/gtest/googlemock/gtest/cmake_install.cmake")
+  include("/home/the1kieran/Dancing_with_lights/build/gtest/googletest/cmake_install.cmake")
 
 endif()
 
