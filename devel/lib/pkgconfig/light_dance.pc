@@ -1,4 +1,4 @@
-prefix=/home/the1kieran/Dancing_with_lights/devel
+prefix=C:/Users/the1k/source/repos/Light_dance_project/devel
 
 Name: light_dance
 Description: Description of light_dance

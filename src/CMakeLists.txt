@@ -91,6 +91,7 @@ include_directories(
 
 set (SOURCES 
 			ROS_light_command.py
+			Light_display.py
 )
 
 #add_custom_target(xspublic

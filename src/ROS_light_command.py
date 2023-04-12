@@ -76,7 +76,7 @@ class LightNode():
         # Put light command code here
         while not rospy.is_shutdown(): # loop until node is shut down
             try:
-                # ~ print("Command sent")
+                # mapping metrics for room and person
                 x_max = 4
                 x_min = -2.5
                 y_min = -2.25
@@ -86,14 +86,12 @@ class LightNode():
                 spin_max = 200
                 spin_min = 0
                 
-                # try:
-                # Keep brightness between 0 and 100 for the min and max x distances of the room
+                # Keep brightness between 0 and 100 for the min and max distances or frontal pelvis ang vel of the room
                 # brightness = self.brightnesses[int(max(0, min(100, (self.x_pos - x_min) / (x_max - x_min) * 100)))]
-
                 # brightness = self.brightnesses[int(max(0, min(100, (self.z_pos - z_min) / (z_max - z_min) * 100)))]
                 brightness = self.brightnesses[int(max(1, min(100, (self.pelvis_ang_vel - spin_min) / (spin_max - spin_min) * 100)))]
 
-                # Keep color between 0 and 255 for the min and max y distances of the room
+                # Keep color between 0 and 255 for the min and max distances of the room
                 color_var = max(1, min(100, (self.y_pos - y_min) / (y_max - y_min) * 100))
                 # print(color_var)
                 color = self.colors[int(color_var)]
@@ -102,13 +100,6 @@ class LightNode():
                 # print(color)
                 
                 print(brightness, self.pelvis_ang_vel)
-
-                #offset_x = 10
-                #brightness = self.brightnesses[int(self.x_pos*10)+offset_x]
-                #offset_y = 10
-                #subset_x = (self.colors[int(self.x_pos*10)+offset_x])
-                #subset_y = (self.colors[int(self.y_pos*10)+offset_y])
-                #color = [subset_x,subset_y,0]
                         
                 # set the color and brightness of the light
                 self.my_device.setBrightness(brightness)
