@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/the1k/source/repos/Light_dance_project/src
+# Install script for directory: /home/pi/Dancing_with_lights/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/the1k/source/repos/Light_dance_project/install")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/Dancing_with_lights/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -25,6 +25,11 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   else()
     set(CMAKE_INSTALL_COMPONENT)
   endif()
+endif()
+
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -44,80 +49,111 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/the1k/source/repos/Light_dance_project/install/_setup_util.py")
+   "/home/pi/Dancing_with_lights/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Users/the1k/source/repos/Light_dance_project/install" TYPE PROGRAM FILES "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/pi/Dancing_with_lights/install" TYPE PROGRAM FILES "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/the1k/source/repos/Light_dance_project/install/_setup_util.exe")
+   "/home/pi/Dancing_with_lights/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Users/the1k/source/repos/Light_dance_project/install" TYPE EXECUTABLE FILES "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/windows_wrappers/light_dance__setup_util.py_exec_install_python/_setup_util.exe")
+file(INSTALL DESTINATION "/home/pi/Dancing_with_lights/install" TYPE PROGRAM FILES "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/the1k/source/repos/Light_dance_project/install/env.bat")
+   "/home/pi/Dancing_with_lights/install/setup.bash;/home/pi/Dancing_with_lights/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Users/the1k/source/repos/Light_dance_project/install" TYPE PROGRAM FILES "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/installspace/env.bat")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/the1k/source/repos/Light_dance_project/install/setup.bat;C:/Users/the1k/source/repos/Light_dance_project/install/local_setup.bat")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "C:/Users/the1k/source/repos/Light_dance_project/install" TYPE FILE FILES
-    "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/installspace/setup.bat"
-    "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/installspace/local_setup.bat"
+file(INSTALL DESTINATION "/home/pi/Dancing_with_lights/install" TYPE FILE FILES
+    "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/setup.bash"
+    "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/the1k/source/repos/Light_dance_project/install/.rosinstall")
+   "/home/pi/Dancing_with_lights/install/setup.sh;/home/pi/Dancing_with_lights/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Users/the1k/source/repos/Light_dance_project/install" TYPE FILE FILES "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/pi/Dancing_with_lights/install" TYPE FILE FILES
+    "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/setup.sh"
+    "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/local_setup.sh"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/installspace/light_dance.pc")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/pi/Dancing_with_lights/install/setup.zsh;/home/pi/Dancing_with_lights/install/local_setup.zsh")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/pi/Dancing_with_lights/install" TYPE FILE FILES
+    "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/setup.zsh"
+    "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/local_setup.zsh"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/pi/Dancing_with_lights/install/.rosinstall")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/pi/Dancing_with_lights/install" TYPE FILE FILES "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/.rosinstall")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/light_dance/msg" TYPE FILE FILES
+    "/home/pi/Dancing_with_lights/src/msg/EuropaMsg.msg"
+    "/home/pi/Dancing_with_lights/src/msg/IMUDataMsg.msg"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/light_dance.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/light_dance/cmake" TYPE FILE FILES
-    "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/installspace/light_danceConfig.cmake"
-    "C:/Users/the1k/source/repos/Light_dance_project/build/catkin_generated/installspace/light_danceConfig-version.cmake"
+    "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/light_danceConfig.cmake"
+    "/home/pi/Dancing_with_lights/build/catkin_generated/installspace/light_danceConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/light_dance" TYPE FILE FILES "C:/Users/the1k/source/repos/Light_dance_project/src/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/light_dance" TYPE FILE FILES "/home/pi/Dancing_with_lights/src/package.xml")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/pi/Dancing_with_lights/build/gtest/cmake_install.cmake")
+
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -128,5 +164,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/the1k/source/repos/Light_dance_project/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/Dancing_with_lights/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

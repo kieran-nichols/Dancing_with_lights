@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "C:/opt/ros/noetic/x64/lib")
+set(ORDERED_PATHS "/home/pi/ros_catkin_ws/install_isolated/lib")

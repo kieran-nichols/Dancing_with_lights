@@ -13,10 +13,11 @@ project(light_dance)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS system)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -49,11 +50,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  EuropaMsg.msg
+  IMUDataMsg.msg
+)
 
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
@@ -91,6 +92,7 @@ include_directories(
 
 set (SOURCES 
 			ROS_light_command.py
+			ROS_light_command_expo.py
 			Light_display.py
 )
 
